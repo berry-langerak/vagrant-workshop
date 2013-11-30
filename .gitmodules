@@ -1,0 +1,9 @@
+[submodule "dev/puppet/modules/apache"]
+	path = dev/puppet/modules/apache
+	url = git@github.com:example42/puppet-apache.git
+[submodule "dev/puppet/modules/php"]
+	path = dev/puppet/modules/php
+	url = git@github.com:example42/puppet-php.git
+[submodule "dev/puppet/modules/puppi"]
+	path = dev/puppet/modules/puppi
+	url = git@github.com:example42/puppi.git
