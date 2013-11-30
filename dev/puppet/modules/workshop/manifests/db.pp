@@ -2,6 +2,7 @@ class workshop::db {
 
     class { "mysql":
         root_password   => $::params::root_password,
+        absent          => false,
     }
 
     notify { "Creating database.":
@@ -18,5 +19,7 @@ class workshop::db {
     mysql::queryfile { "create-structure":
         mysql_file      => "/vagrant/dev/database/structure.sql",
         mysql_db        => $::params::dbname,
+        require         => Mysql::Grant['workshop'],
     }
+
 }

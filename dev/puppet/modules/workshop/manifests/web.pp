@@ -11,6 +11,12 @@ class workshop::web {
         priority    => '',
     }
 
+    # Parse the PHP version.
+    if $phpversion == undef {
+      $phpversion = 'latest'
+    }
+
     class { "php":
+      version => $phpversion,
     }
 }

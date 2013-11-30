@@ -20,5 +20,4 @@ class workshop::setup {
     exec { "touch /tmp/touch-test":
         unless => 'test -f /tmp/touch-test',
     }
-
 }

@@ -26,6 +26,12 @@ Vagrant.configure("2") do |config|
     puppet.manifests_path = "dev/puppet/manifests"
     puppet.module_path = "dev/puppet/modules"
 
+    if (ENV['PHP_VERSION']) then
+      puppet.facter = {
+        "phpversion" => ENV['PHP_VERSION']
+      }
+    end
+
     if (ENV['DEBUG']) then
       puppet.options = [
         '--verbose', 
