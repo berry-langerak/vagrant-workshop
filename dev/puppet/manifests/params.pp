@@ -8,6 +8,7 @@ class params {
     $port = '80'
 
     # Database information.
+    $root_password = 'test'
     $dbname = 'workshop'
     $dbuser = 'workshop'
     $dbpass = ''
